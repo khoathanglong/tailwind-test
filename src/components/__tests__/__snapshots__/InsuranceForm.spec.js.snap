@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InsuranceForm shows correct package option labels based on location 1`] = `
+<div>
+  <h1>Tell us about your self</h1>
+  <div><label for="Name">Name</label> <input type="text" name="Name" placeholder="Add text" required="required">
+    <!---->
+  </div>
+  <div><label for="Age">Age</label> <input type="number" name="Age" placeholder="Age" required="required">
+    <!---->
+  </div> <label for="location">Where do you live</label> <select name="location" id="location">
+    <option value="hongkong">
+      Hong Kong
+    </option>
+    <option value="usa">
+      USA
+    </option>
+    <option value="australia">
+      Australia
+    </option>
+  </select>
+  <div><input id="standard" type="radio" value="standard"> <label for="standard">
+      Standard </label></div>
+  <div><input id="safe" type="radio" value="safe"> <label for="safe">
+      Safe +(50HKD, 50%)</label></div>
+  <div><input id="extra" type="radio" value="extra"> <label for="extra">
+      Extra +(75HKD, 75%)</label></div>
+  <h1 data-test="premium">
+    Your premium is 100HKD
+  </h1> <button data-test="backButton">Back</button> <button data-test="nextButton">Next</button>
+</div>
+`;
+
+exports[`InsuranceForm shows correct package option labels based on location 2`] = `
+<div>
+  <h1>Tell us about your self</h1>
+  <div><label for="Name">Name</label> <input type="text" name="Name" placeholder="Add text" required="required">
+    <!---->
+  </div>
+  <div><label for="Age">Age</label> <input type="number" name="Age" placeholder="Age" required="required">
+    <!---->
+  </div> <label for="location">Where do you live</label> <select name="location" id="location">
+    <option value="hongkong">
+      Hong Kong
+    </option>
+    <option value="usa">
+      USA
+    </option>
+    <option value="australia">
+      Australia
+    </option>
+  </select>
+  <div><input id="standard" type="radio" value="standard"> <label for="standard">
+      Standard </label></div>
+  <div><input id="safe" type="radio" value="safe"> <label for="safe">
+      Safe +(100USD, 50%)</label></div>
+  <div><input id="extra" type="radio" value="extra"> <label for="extra">
+      Extra +(150USD, 75%)</label></div>
+  <h1 data-test="premium">
+    Your premium is 200USD
+  </h1> <button data-test="backButton">Back</button> <button data-test="nextButton">Next</button>
+</div>
+`;
+
+exports[`InsuranceForm shows correct package option labels based on location 3`] = `
+<div>
+  <h1>Tell us about your self</h1>
+  <div><label for="Name">Name</label> <input type="text" name="Name" placeholder="Add text" required="required">
+    <!---->
+  </div>
+  <div><label for="Age">Age</label> <input type="number" name="Age" placeholder="Age" required="required">
+    <!---->
+  </div> <label for="location">Where do you live</label> <select name="location" id="location">
+    <option value="hongkong">
+      Hong Kong
+    </option>
+    <option value="usa">
+      USA
+    </option>
+    <option value="australia">
+      Australia
+    </option>
+  </select>
+  <div><input id="standard" type="radio" value="standard"> <label for="standard">
+      Standard </label></div>
+  <div><input id="safe" type="radio" value="safe"> <label for="safe">
+      Safe +(150AUD, 50%)</label></div>
+  <div><input id="extra" type="radio" value="extra"> <label for="extra">
+      Extra +(225AUD, 75%)</label></div>
+  <h1 data-test="premium">
+    Your premium is 300AUD
+  </h1> <button data-test="backButton">Back</button> <button data-test="nextButton">Next</button>
+</div>
+`;
