@@ -1,13 +1,27 @@
 <template>
-  <div>
-    <h1>Summary</h1>
-    <h2>{{ name }}</h2>
-    <p>Name: {{ name }}</p>
-    <p>Where do you live: {{ location }}</p>
-    <p>Package: {{ pack }}</p>
-    <p>Premium: {{ premium }}{{ currency }}</p>
-    <button @click="handleBack" data-test="backButton">Back</button>
-    <button @click="handleNext" data-test="nextButton">Next</button>
+  <div class="h-screen w-fit flex flex-col justify-center">
+    <h1 class="text-3xl font-bold self-center">Summary</h1>
+    <h2 class="text-2xl font-bold self-center mt-10">{{ name }}</h2>
+    <p class="mt-10 self-center">Name: {{ name }}</p>
+    <p class="mt-10 self-center">Where do you live: {{ location }}</p>
+    <p class="mt-10 self-center">Package: {{ pack }}</p>
+    <p class="mt-10 self-center">Premium: {{ premium }}{{ currency }}</p>
+    <div class="self-center mt-10">
+      <button
+        class="rounded w-24 h-10 border-2 border-grey-900 text-black mx-2"
+        @click="handleBack"
+        data-test="backButton"
+      >
+        Back
+      </button>
+      <button
+        class="rounded w-24 h-10 bg-black text-white"
+        @click="handleBuy"
+        data-test="buyButton"
+      >
+        Buy
+      </button>
+    </div>
   </div>
 </template>
 
@@ -41,7 +55,7 @@ export default {
     },
   },
   methods: {
-    handleNext() {
+    handleBuy() {
       this.$router.push("/")
     },
     handleBack() {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex">
     <InsuranceForm @submit="handleSubmitForm" v-if="!showSummary" />
     <InsuranceSummary
       v-if="showSummary"

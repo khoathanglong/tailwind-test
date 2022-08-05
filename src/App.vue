@@ -1,11 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="flex justify-center h-screen w-screen">
     <router-view />
   </div>
 </template>
-
-<style>
-#app {
-  text-align: center;
-}
-</style>

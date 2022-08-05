@@ -1,57 +1,90 @@
 <template>
-  <div>
-    <h1>Tell us about your self</h1>
-    <div>
-      <label for="Name">Name</label>
+  <div class="h-screen w-fit flex flex-col justify-center">
+    <h1 class="text-3xl font-bold self-center">Tell us about your self</h1>
+    <div class="mt-10 self-center">
+      <label for="Name" class="block">Name</label>
       <input
+        class="rounded w-60 py-2 h-10 border-2 border-grey-200"
         type="text"
         name="Name"
         placeholder="Add text"
         v-model="name"
         required
       />
-      <div v-if="error.name" data-test="nameError">{{ error.name }}</div>
+      <div class="text-rose-500" data-test="nameError">
+        {{ error.name }}
+      </div>
     </div>
-    <div>
-      <label for="Age">Age</label>
+    <div class="self-center mt-5">
+      <label for="Age" class="block">Age</label>
       <input
         type="number"
+        class="rounded w-60 py-2 h-10 border-2 border-grey-200"
         name="Age"
         placeholder="Age"
         v-model.number="age"
         required
       />
-      <div v-if="error.age" data-test="ageError">{{ error.age }}</div>
+      <div class="text-rose-500" data-test="ageError">
+        {{ error.age }}
+      </div>
     </div>
 
-    <label for="location">Where do you live</label>
-    <select name="location" id="location" v-model="selectedLocation">
-      <option
-        v-for="location in locations"
-        :value="location.value"
-        :key="location.value"
+    <div class="self-center mt-5">
+      <label for="location" class="block">Where do you live</label>
+      <select
+        class="rounded w-60 h-10 border-2 border-grey-200 bg-white"
+        name="location"
+        id="location"
+        v-model="selectedLocation"
       >
-        {{ location.name }}
-      </option>
-    </select>
-    <div v-for="(pack, index) in packages" :key="pack.value">
-      <input
-        :id="pack.value"
-        type="radio"
-        :value="pack.value"
-        v-model="selectedPackage"
-      />
-      <label :for="pack.value">
-        {{ pack.name }} {{ packageAdditionalInfo[index] }}</label
+        <option
+          v-for="location in locations"
+          :value="location.value"
+          :key="location.value"
+        >
+          {{ location.name }}
+        </option>
+      </select>
+    </div>
+    <div class="self-center">
+      <div
+        v-for="(pack, index) in packages"
+        :key="pack.value"
+        class="self-start mt-5 w-60"
       >
+        <input
+          :id="pack.value"
+          type="radio"
+          :value="pack.value"
+          v-model="selectedPackage"
+        />
+        <label :for="pack.value">
+          {{ pack.name }} {{ packageAdditionalInfo[index] }}</label
+        >
+      </div>
     </div>
 
-    <h1 data-test="premium">
+    <h1 data-test="premium" class="text-2xl font-bold self-center my-10">
       Your premium is {{ premium }}{{ this.currentLocation.currency }}
     </h1>
 
-    <button @click="handleBack" data-test="backButton">Back</button>
-    <button @click="handleNext" data-test="nextButton">Next</button>
+    <div class="self-center">
+      <button
+        @click="handleBack"
+        data-test="backButton"
+        class="rounded w-24 h-10 border-2 border-grey-900 text-black mx-2"
+      >
+        Back
+      </button>
+      <button
+        @click="handleNext"
+        data-test="nextButton"
+        class="rounded w-24 h-10 bg-black text-white"
+      >
+        Next
+      </button>
+    </div>
   </div>
 </template>
 
@@ -60,7 +93,7 @@ export default {
   name: "InsuranceForm",
   data() {
     return {
-      name: "",
+      name: "Long",
       age: 20,
       selectedLocation: "hongkong",
       selectedPackage: "standard",
